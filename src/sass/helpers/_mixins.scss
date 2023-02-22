@@ -1,0 +1,12 @@
+@mixin center-content() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin border-radius($dims) {
+  border-radius: $dims;
+  -webkit-border-radius: $dims;
+  -moz-border-radius: $dims;
+  -ms-border-radius: $dims;
+  -o-border-radius: $dims;
+}
