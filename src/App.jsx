@@ -5,13 +5,12 @@ import dollar from "./images/icon-dollar.svg";
 import person from "./images/icon-person.svg";
 
 function App() {
-  const [bill, setBill] = useState("");
-  const [peopleNum, setPeopleNum] = useState("");
-  const [tip, setTip] = useState(0);
+  const [bill, setBill] = useState("142.55");
+  const [peopleNum, setPeopleNum] = useState("5");
+  const [tip, setTip] = useState(0.15);
   const [tipAmount, setTipAmount] = useState(0);
   const [total, setTotal] = useState(0);
   const [zeroPeople, setZeroPeople] = useState(false);
-  // const [customTip, setCustomTip] = useState(0);
 
   const handleBillChange = (e) => {
     let value = e.target.value.replace(/[^0-9.]/g, "");
@@ -35,6 +34,7 @@ function App() {
   const handleReset = () => {
     setBill("");
     setPeopleNum("");
+    setTip(0);
   };
 
   const tipAmountCalculate = (bill, tip, peopleNum) => {
@@ -96,6 +96,7 @@ function App() {
                     name="tip-group"
                     value={0.15}
                     onChange={handleTipChange}
+                    defaultChecked={(e) => e.target.value === tip}
                   />
                 </label>
               </li>

@@ -166,3 +166,49 @@ input[type="text"] {
     }
   }
 }
+
+@media (max-width: 425px) {
+  .App {
+    padding: 158px 0 0;
+    .logo {
+      margin-bottom: 34px;
+      margin-top: 10px;
+    }
+    .container {
+      width: 100%;
+      flex-direction: column;
+      @include border-radius(25px 25px 0 0);
+      .input-bill {
+        width: 100%;
+        padding: 33px {
+          left: 32px;
+        }
+        gap: 33.5px;
+        .tips {
+          gap: 16px !important;
+          .tip-btn {
+            width: calc(100% / 2 - 8px) !important;
+          }
+        }
+      }
+      .output {
+        padding: 0 24px 32px;
+        .result {
+          padding: 24px {
+            top: 34px !important;
+          } 
+          .result-desc {
+            gap: 15px !important;
+             h1 {
+              font-size: 2rem !important;
+              margin-top: 4px !important;
+            }
+          }
+          input[type="reset"] {
+            margin-top: 33px;
+          }
+        }
+      }
+    }
+  }
+}
